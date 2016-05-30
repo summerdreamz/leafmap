@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://leafletjs.com/examples/custom-icons-example.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Leaflet Quick Start Guide Example</title>
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./Leaflet Quick Start Guide Example_files/leaflet.css">
+</head>
+<body>
+	<div id="map" style="width: 600px; height: 400px; position: relative;" class="leaflet-container leaflet-fade-anim" tabindex="0"><div class="leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./Leaflet Quick Start Guide Example_files/2724.png" style="height: 256px; width: 256px; left: 312px; top: 118px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Leaflet Quick Start Guide Example_files/2724(1).png" style="height: 256px; width: 256px; left: 56px; top: 118px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Leaflet Quick Start Guide Example_files/2723.png" style="height: 256px; width: 256px; left: 312px; top: -138px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Leaflet Quick Start Guide Example_files/2723(1).png" style="height: 256px; width: 256px; left: 56px; top: -138px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Leaflet Quick Start Guide Example_files/2725.png" style="height: 256px; width: 256px; left: 56px; top: 374px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Leaflet Quick Start Guide Example_files/2725(1).png" style="height: 256px; width: 256px; left: 312px; top: 374px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Leaflet Quick Start Guide Example_files/2724(2).png" style="height: 256px; width: 256px; left: -200px; top: 118px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Leaflet Quick Start Guide Example_files/2724(3).png" style="height: 256px; width: 256px; left: 568px; top: 118px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Leaflet Quick Start Guide Example_files/2725(2).png" style="height: 256px; width: 256px; left: -200px; top: 374px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Leaflet Quick Start Guide Example_files/2723(2).png" style="height: 256px; width: 256px; left: -200px; top: -138px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Leaflet Quick Start Guide Example_files/2723(3).png" style="height: 256px; width: 256px; left: 568px; top: -138px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Leaflet Quick Start Guide Example_files/2725(3).png" style="height: 256px; width: 256px; left: 568px; top: 374px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"><img src="./Leaflet Quick Start Guide Example_files/leaf-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" style="margin-left: -4px; margin-top: -62px; width: 50px; height: 64px; transform: translate3d(300px, 200px, 0px);"><img src="./Leaflet Quick Start Guide Example_files/leaf-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" style="margin-left: -4px; margin-top: -62px; width: 50px; height: 64px; transform: translate3d(340px, 247px, 0px);"><img src="./Leaflet Quick Start Guide Example_files/leaf-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" style="margin-left: -4px; margin-top: -62px; width: 50px; height: 64px; transform: translate3d(241px, 293px, 0px);"></div><div class="leaflet-overlay-pane"></div><div class="leaflet-marker-pane"><img src="./Leaflet Quick Start Guide Example_files/leaf-green.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(300px, 200px, 0px); z-index: 200;"><img src="./Leaflet Quick Start Guide Example_files/leaf-red.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(340px, 247px, 0px); z-index: 247;"><img src="./Leaflet Quick Start Guide Example_files/leaf-orange.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(241px, 293px, 0px); z-index: 293;"></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://leafletjs.com/examples/custom-icons-example.html#" title="Zoom in">+</a><a class="leaflet-control-zoom-out" href="http://leafletjs.com/examples/custom-icons-example.html#" title="Zoom out">-</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | © <a href="http://osm.org/copyright">OpenStreetMap</a> contributors</div></div></div></div>
+
+	<script src="./Leaflet Quick Start Guide Example_files/leaflet.js"></script>
+	<script>
+		var map = L.map('map').setView([51.5, -0.09], 13);
+
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+		var LeafIcon = L.Icon.extend({
+			options: {
+				shadowUrl: '../docs/images/leaf-shadow.png',
+				iconSize:     [38, 95],
+				shadowSize:   [50, 64],
+				iconAnchor:   [22, 94],
+				shadowAnchor: [4, 62],
+				popupAnchor:  [-3, -76]
+			}
+		});
+
+		var greenIcon = new LeafIcon({iconUrl: '../docs/images/leaf-green.png'}),
+			redIcon = new LeafIcon({iconUrl: '../docs/images/leaf-red.png'}),
+			orangeIcon = new LeafIcon({iconUrl: '../docs/images/leaf-orange.png'});
+
+		L.marker([51.5, -0.09], {icon: greenIcon}).bindPopup("I am a green leaf.").addTo(map);
+		L.marker([51.495, -0.083], {icon: redIcon}).bindPopup("I am a red leaf.").addTo(map);
+		L.marker([51.49, -0.1], {icon: orangeIcon}).bindPopup("I am an orange leaf.").addTo(map);
+
+	</script>
+
+
+</body></html>
